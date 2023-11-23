@@ -1,56 +1,45 @@
-body{
-  background-image: linear-gradient(
-    45deg,
-    hsl(222deg 47% 11%) 0%,
-    hsl(222deg 47% 11%) 13%,
-    hsl(222deg 47% 11%) 25%,
-    hsl(222deg 47% 11%) 37%,
-    hsl(222deg 47% 11%) 50%,
-    hsl(222deg 47% 11%) 63%,
-    hsl(222deg 47% 11%) 75%,
-    hsl(222deg 47% 11%) 87%,
-    hsl(222deg 47% 11%) 100%
-  );
-/* background-color:red; */
+@import url("./styles/partials/colors.css");
+body {
+  background-image: linear-gradient(45deg, hsl(222, 47%, 11%) 0%, hsl(222, 47%, 11%) 13%, hsl(222, 47%, 11%) 25%, hsl(222, 47%, 11%) 37%, hsl(222, 47%, 11%) 50%, hsl(222, 47%, 11%) 63%, hsl(222, 47%, 11%) 75%, hsl(222, 47%, 11%) 87%, hsl(222, 47%, 11%) 100%);
+  /* background-color:red; */
   overflow-x: hidden;
 }
 
-html{
+html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-header{
+header {
   box-sizing: border-box;
   box-shadow: 10px 5px 5px black;
 }
 
-.heading{
-  color: gray;
+.heading {
+  color: var(--color1);
   margin-left: 11rem;
 }
 
-.main{
+.main {
   justify-content: center;
   text-align: center;
 }
 
-.main input{
-  height:3rem;
+.main input {
+  height: 3rem;
   width: 50rem;
   padding: 12px;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   border: 2px solid gray;
 }
 
-
-.container{
+.container {
   margin: 5rem;
   padding: 3rem;
 }
 
-.container button{
-  padding: .8rem 2.8rem;
+.container button {
+  padding: 0.8rem 2.8rem;
   background-color: #6b59ed;
   border: none;
   font-weight: 700;
@@ -58,31 +47,31 @@ header{
   font-size: 15px;
 }
 
-.main{
+.main {
   /* background-color: brown; */
 }
 
-.list-container{
+.list-container {
   /* background-color: #6b59ed; */
   /* justify-content: center;
   text-align: center */
-  padding:2rem 11.5rem ;
+  padding: 2rem 11.5rem;
 }
 
-.task{
+.task {
   /* background-color: red; */
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 18px;
   border-radius: 2px;
   position: relative;
-/* background-color: gainsboro; */
+  /* background-color: gainsboro; */
 }
 
-li{
+li {
   list-style: none;
 }
 
-#form .icon{
+#form .icon {
   float: inline-end;
   font-size: 20px;
   /* margin-left:42rem ; */
@@ -91,127 +80,101 @@ li{
   /* position: ; */
 }
 
-label{
+label {
   /* color: white; */
 }
-input[type="checkbox"]:checked+ label.form-check-label{
+
+input[type=checkbox]:checked + label.form-check-label {
   text-decoration: line-through;
 }
 
 /* ============ Media Queries Section ================== */
-
-@media screen and (max-width:1200px) and (min-width:992px){
-  .main input{
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+  .main input {
     width: 30rem;
   }
-
-  .list-container{
+  .list-container {
     padding: 2rem 13.5rem;
   }
 }
-
-@media screen and (max-width:991px) and (min-width:768px){
-  .main input{
-    width:25rem ;
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .main input {
+    width: 25rem;
   }
-
-  .heading{
+  .heading {
     margin-left: 5rem;
   }
-
-  .list-container{
+  .list-container {
     padding: 2rem 8rem;
   }
 }
-
-@media screen and (max-width:767px) and (min-width:576px){
-  .main input{
+@media screen and (max-width: 767px) and (min-width: 576px) {
+  .main input {
     width: 19rem;
   }
-
-  .heading{
+  .heading {
     margin-left: 3rem;
   }
-
-  .main{
+  .main {
     padding: 0 2rem;
   }
-
-  .list-container{
+  .list-container {
     padding: 2rem 4rem;
   }
 }
-
-@media screen and (max-width:576px) and (min-width:407px){
-  .main input{
+@media screen and (max-width: 576px) and (min-width: 407px) {
+  .main input {
     width: 15rem;
   }
-
-  .container{
+  .container {
     margin: 4rem;
   }
-
-  .heading{
+  .heading {
     margin-left: 1.6rem;
   }
-
-  .list-container{
+  .list-container {
     padding: 2rem 5rem;
   }
 }
-
-@media screen and (max-width:406px) and (min-width:280px) {
-  .main input{
+@media screen and (max-width: 406px) and (min-width: 280px) {
+  .main input {
     width: 14rem;
   }
-
-  .container button{
-    padding: .8rem 1.8rem;
+  .container button {
+    padding: 0.8rem 1.8rem;
     background-color: #6b59ed;
     border: none;
     font-weight: 700;
     border-radius: 5px;
     font-size: 10px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
-
-  .heading{
-    margin-left: .6rem;
+  .heading {
+    margin-left: 0.6rem;
   }
-
-  .list-container{
-    padding: 2rem .5rem;
+  .list-container {
+    padding: 2rem 0.5rem;
   }
 }
-
-@media screen and (max-width:279px)  {
-  .main input{
+@media screen and (max-width: 279px) {
+  .main input {
     max-width: 12rem;
   }
-
-  .container button{
-    padding: .8rem 1.8rem;
+  .container button {
+    padding: 0.8rem 1.8rem;
     background-color: #6b59ed;
     border: none;
     font-weight: 700;
     border-radius: 5px;
     font-size: 10px;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
-
   /* .heading{
     margin-left: .6rem;
   } */
-
-  .list-container{
-    padding: 2rem .2rem;
+  .list-container {
+    padding: 2rem 0.2rem;
   }
 }
 
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */
