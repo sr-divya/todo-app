@@ -27,7 +27,7 @@ function selectData() {
         newEle.innerHTML = `
             <div class="task border-bottom mb-2">
                 <li>
-                    <div class="form-check" id="form">
+                    <div class="form-check d-flex" id="form">
                         <input  ${arr[k].isComplete?`checked`:''} type="checkbox" class="form-check-input" onclick="save(${arr[k].id})">
                         <label class="${arr[k].isComplete?`form-check-label`:''}">${arr[k].todo}</label>
                         <div class="icon">
