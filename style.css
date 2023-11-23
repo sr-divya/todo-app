@@ -48,18 +48,18 @@ header {
 }
 
 .main {
-  /* background-color: brown; */
+  background-color: brown;
 }
 
 .list-container {
-  /* background-color: #6b59ed; */
+  background-color: #6b59ed;
   /* justify-content: center;
   text-align: center */
   padding: 2rem 11.5rem;
 }
 
 .task {
-  /* background-color: red; */
+  background-color: red;
   padding: 0.5rem 2rem;
   font-size: 18px;
   border-radius: 2px;
@@ -75,7 +75,7 @@ li {
   float: inline-end;
   font-size: 20px;
   /* margin-left:42rem ; */
-  right: 20px;
+  /* right: 5px; */
   /* color: white; */
   /* position: ; */
 }
@@ -160,6 +160,7 @@ input[type=checkbox]:checked + label.form-check-label {
   .main input {
     max-width: 12rem;
   }
+
   .container button {
     padding: 0.8rem 1.8rem;
     background-color: #6b59ed;
