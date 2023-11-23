@@ -53,8 +53,6 @@ header {
 
 .list-container {
   /* background-color: #6b59ed; */
-  /* justify-content: center;
-  text-align: center */
   padding: 2rem 11.5rem;
 }
 
@@ -74,14 +72,6 @@ li {
 #form .icon {
   float: inline-end;
   font-size: 20px;
-  /* margin-left:42rem ; */
-  /* right: 5px; */
-  /* color: white; */
-  /* position: ; */
-}
-
-label {
-  /* color: white; */
 }
 
 input[type=checkbox]:checked + label.form-check-label {
@@ -89,6 +79,7 @@ input[type=checkbox]:checked + label.form-check-label {
 }
 
 /* ============ Media Queries Section ================== */
+
 @media screen and (max-width: 1200px) and (min-width: 992px) {
   .main input {
     width: 30rem;
