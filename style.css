@@ -184,7 +184,7 @@ input[type="checkbox"]:checked+ label.form-check-label{
   }
 }
 
-@media screen and (max-width:279px) and  {
+@media screen and (max-width:279px)  {
   .main input{
     max-width: 12rem;
   }

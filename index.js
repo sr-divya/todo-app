@@ -1,39 +1,5 @@
-// let inp = document.getElementById("items");
-// let text = document.querySelector('.list-container');
-// localStorage.clear()
-// // console.log(inp);
-
-// function addtask() {
-//     if (inp.value == '') {
-//         alert("First Enter a new Task!!!");
-//         return false;
-//     }
-//     else {
-
-//         let newEle = document.createElement('li');
-//         newEle.innerHTML += `
-//         <div class="task  border-bottom  mb-2">
-//                 <li>
-//                     <div class="form-check" id="form">
-//                         <input type="checkbox" class="form-check-input" id="check">
-//                         <label class="form-check-label" for="check">${inp.value}</label>
-//                         <div class="icon">
-//                             <ion-icon name="trash-outline" class="del-icon"></ion-icon>
-//                         </div>
-//                     </div>
-//                </li>
-//             </div>
-//         `;
-
-//         text.appendChild(newEle);
-//         inp.value = '';
-//         newEle.querySelector('ion-icon').addEventListener("click", function () {
-//             newEle.remove();
-//         })
-//     }
-// }
-
 selectData();
+
 
 function addtask() {
     let inp = document.getElementById('items').value;
@@ -42,9 +8,10 @@ function addtask() {
         alert("Please enter a task first!!");
     } else {
         let arr = JSON.parse(localStorage.getItem('crud')) || [];
-        arr.push(inp);
+        arr.push({todo:inp,isComplete:false,id:new Date().getTime()});
         localStorage.setItem('crud', JSON.stringify(arr));
         selectData(); // Update the list after adding a task
+        
     }
 
     document.getElementById('items').value = '';
@@ -61,8 +28,8 @@ function selectData() {
             <div class="task border-bottom mb-2">
                 <li>
                     <div class="form-check" id="form">
-                        <input type="checkbox" class="form-check-input">
-                        <label class="form-check-label">${arr[k]}</label>
+                        <input  ${arr[k].isComplete?`checked`:''} type="checkbox" class="form-check-input" onclick="save(${arr[k].id})">
+                        <label class="${arr[k].isComplete?`form-check-label`:''}">${arr[k].todo}</label>
                         <div class="icon">
                             <ion-icon name="trash-outline" class="del-icon" onclick="deleteTask(${k})"></ion-icon>
                         </div>
@@ -72,6 +39,7 @@ function selectData() {
         `;
 
         text.appendChild(newEle);
+      
     }
 }
 
@@ -80,4 +48,19 @@ function deleteTask(index) {
     arr.splice(index, 1);
     localStorage.setItem('crud', JSON.stringify(arr));
     selectData(); // Update the list after deleting a task
+}
+
+function save(id){
+    let arr1=JSON.parse(localStorage.getItem('crud')) || [];
+
+    const new_arr = arr1.filter((cur,i,arr)=>{
+        if(cur.id===id){
+            cur.isComplete= true
+        }
+        return cur
+    })
+
+            localStorage.setItem('crud',JSON.stringify(new_arr));
+            console.log("work success");
+            selectData()
 }
